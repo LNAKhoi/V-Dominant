@@ -12,7 +12,7 @@ Services included:
 - analytics-service
 - api-gateway
 - config-server
-- frontend-angular-placeholder
+- v-dominant-frontend
 
 Next steps:
 1. For each service run `mvn package` and configure application.properties (DB, service discovery).
