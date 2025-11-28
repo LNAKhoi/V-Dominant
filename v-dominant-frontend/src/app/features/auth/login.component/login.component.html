@@ -1,1 +1,12 @@
-<p>login.component works!</p>
+<div class="login-container">
+  <div class="login-box">
+    <div class="logo"></div>
+    <form class="form-input" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <input type="email" placeholder="Email" formControlName="email" required />
+      <input type="password" placeholder="Password" formControlName="password" required />
+      <a class="forgot-link" href="#">Forgot password?</a>
+      <button type="submit" class="get-started">Login</button>
+    </form>
+
+  </div>
+</div>
