@@ -1,5 +1,5 @@
 {
-  "name": "v-dominant",
+  "name": "v-dominant-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:v-dominant": "node dist/v-dominant/server/server.mjs"
+    "serve:ssr:v-dominant-frontend": "node dist/v-dominant-frontend/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,

@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "v-dominant": {
+    "v-dominant-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "v-dominant:build:production"
+              "buildTarget": "v-dominant-frontend:build:production"
             },
             "development": {
-              "buildTarget": "v-dominant:build:development"
+              "buildTarget": "v-dominant-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
