@@ -1,5 +1,25 @@
 body, html {
   margin: 0;
   padding: 0;
-  background: transparent;
 }
+
+//html, body { height: 100%; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mtb {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.left-text {
+  text-align: left;
+}
+

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AuthServiceController {
-    @GetMapping("/health")
+    @GetMapping("/login")
     public String health() {
         return "auth-service is up";
     }

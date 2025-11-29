@@ -1,1 +1,32 @@
-<p>register.component works!</p>
+<div class="login-container">
+  <div class="login-box">
+    <button class="back-button" mat-icon-button (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div class="logo"></div>
+    <form class="form-input" (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+      <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input matInput type="text" formControlName="firstName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last name</mat-label>
+        <input matInput type="text" formControlName="lastName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput type="text" formControlName="address" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+      </mat-form-field>
+      <button type="submit" class="get-started">Register</button>
+    </form>
+
+  </div>
+</div>

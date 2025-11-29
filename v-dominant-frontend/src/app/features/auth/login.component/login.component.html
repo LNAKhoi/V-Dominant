@@ -1,12 +1,24 @@
 <div class="login-container">
   <div class="login-box">
     <div class="logo"></div>
-    <form class="form-input" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-      <input type="email" placeholder="Email" formControlName="email" required />
-      <input type="password" placeholder="Password" formControlName="password" required />
-      <a class="forgot-link" href="#">Forgot password?</a>
-      <button type="submit" class="get-started">Login</button>
-    </form>
+    <form class="form-input" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required>
+      </mat-form-field>
 
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required/>
+      </mat-form-field>
+
+      <a class="right-text" href="#">Forgot password?</a>
+
+      <button type="submit" class="get-started">Login</button>
+
+      <div class="divider center-text"><span>Or</span></div>
+
+      <button type="button" class="get-started" (click)="navigateToRegister()">Join our forces</button>
+    </form>
   </div>
 </div>
