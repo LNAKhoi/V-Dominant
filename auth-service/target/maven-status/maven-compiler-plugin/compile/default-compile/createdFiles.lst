@@ -1,0 +1,9 @@
+com\vdominant\authservice\config\SecurityConfig.class
+com\vdominant\authservice\repositories\UserRepository.class
+com\vdominant\authservice\entities\UserContact.class
+com\vdominant\authservice\controller\AuthServiceController.class
+com\vdominant\authservice\repositories\UserTokenRepository.class
+com\vdominant\authservice\security\JwtUtil.class
+com\vdominant\authservice\AuthServiceApplication.class
+com\vdominant\authservice\entities\UserToken.class
+com\vdominant\authservice\entities\User.class
