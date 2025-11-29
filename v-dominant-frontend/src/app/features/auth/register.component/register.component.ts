@@ -4,6 +4,8 @@ import {Router} from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {UserDto} from '../../../shared/models/UserDto';
+import {email} from '@angular/forms/signals';
 
 @Component({
   selector: 'app-register.component',
@@ -25,13 +27,23 @@ export class RegisterComponent {
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.registerForm = this.fb.group({
-        email: ['', Validators.required, Validators.email],
-        password: ['', Validators.required, Validators.min(6)],
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]],
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
         address: ['', Validators.required],
       }
     )
+  }
+
+  getSubmitFormData(): UserDto {
+    return {
+      email: this.registerForm.value.email,
+      password: this.registerForm.value.password,
+      firstName: this.registerForm.value.firstName,
+      lastName: this.registerForm.value.lastName,
+      address: this.registerForm.value.address
+    }
   }
 
   onSubmit() {

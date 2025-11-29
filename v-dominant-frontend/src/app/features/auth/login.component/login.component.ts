@@ -1,15 +1,17 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {UserDto} from '../../../shared/models/UserDto';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
   imports: [
     ReactiveFormsModule,
-    MatFormField,
-    MatLabel,
-    MatInput
+    MatFormFieldModule,
+    MatInputModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
@@ -17,6 +19,8 @@ import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 
 export class LoginComponent {
   loginForm: FormGroup;
+  userInformation: UserDto | undefined;
+  private httpClient = inject(HttpClient);
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
@@ -25,15 +29,21 @@ export class LoginComponent {
     });
   }
 
+  getSubmitFormData(): UserDto {
+    return {
+      email: this.loginForm.value.email,
+      password: this.loginForm.value.password
+    }
+  }
+
   onSubmit() {
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched();
-      console.log('entrer');
       return;
+    } else {
+      // TODO: call login api here
     }
-    console.log('abvvcsd');
   }
-
   navigateToRegister() {
     if (this.router) {
       this.router.navigate(['register']);

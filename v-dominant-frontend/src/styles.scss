@@ -23,3 +23,21 @@ body, html {
   text-align: left;
 }
 
+/* Highlight invalid form fields */
+.mat-form-field-invalid .mat-input-element {
+  border-bottom: 2px solid #e53935; /* red underline */
+  background-color: #fff5f5;        /* light red background */
+}
+
+/* Style the error message text */
+mat-error {
+  color: #e53935;       /* material red */
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Optional: animate error appearance */
+mat-error {
+  transition: opacity 0.3s ease-in-out;
+}

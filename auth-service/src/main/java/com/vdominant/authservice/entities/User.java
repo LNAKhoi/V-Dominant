@@ -22,6 +22,6 @@ public class User {
     @Column (nullable = false)
     private String lastName;
     @Column
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 }
 

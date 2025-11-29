@@ -5,16 +5,35 @@
       <mat-form-field>
         <mat-label>Email</mat-label>
         <input matInput type="email" formControlName="email" required>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        @if (loginForm.get('email')?.hasError('email')) {
+          <mat-error>
+            Invalid email format
+          </mat-error>
+        }
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="password" required/>
-      </mat-form-field>
+        <input matInput type="password" formControlName="password" required>
 
+        @if (loginForm.get('password')?.hasError('required')) {
+          <mat-error>
+            Password is required
+          </mat-error>
+        }
+
+        @if (loginForm.get('password')?.hasError('minlength')) {
+          <mat-error>
+            Minimum 6 characters
+          </mat-error>
+        }
+      </mat-form-field>
       <a class="right-text" href="#">Forgot password?</a>
 
-      <button type="submit" class="get-started">Login</button>
+      <button type="submit" class="get-started" [disabled]="!loginForm.valid">Login</button>
 
       <div class="divider center-text"><span>Or</span></div>
 

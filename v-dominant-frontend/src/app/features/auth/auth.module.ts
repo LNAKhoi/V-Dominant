@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {AuthRoutingModule} from './auth-routing.module';
 import {MatIconModule} from '@angular/material/icon';
-
+import {provideHttpClient} from '@angular/common/http';
 
 
 @NgModule({
-  imports: [CommonModule, AuthRoutingModule, MatIconModule]
+  imports: [CommonModule, AuthRoutingModule, MatIconModule],
+  providers: [provideHttpClient()]
 })
-export class AuthModule { }
+export class AuthModule {
+}
