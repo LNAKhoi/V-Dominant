@@ -1,4 +1,4 @@
-package com.gym.notificationservice;
+package com.vdominant.notificationservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

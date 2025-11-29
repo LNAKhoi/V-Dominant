@@ -1,4 +1,4 @@
-package com.gym.membershipservice.controller;
+package com.vdominant.membershipservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

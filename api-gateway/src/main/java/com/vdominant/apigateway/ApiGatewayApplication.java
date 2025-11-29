@@ -1,11 +1,11 @@
-package com.gym.analyticsservice;
+package com.vdominant.apigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AnalyticsServiceApplication {
+public class ApiGatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AnalyticsServiceApplication.class, args);
+        SpringApplication.run(ApiGatewayApplication.class, args);
     }
 }

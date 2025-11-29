@@ -1,4 +1,4 @@
-package com.gym.membershipservice;
+package com.vdominant.membershipservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

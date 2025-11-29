@@ -1,4 +1,4 @@
-package com.gym.notificationservice.controller;
+package com.vdominant.notificationservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.gym.authservice;
+package com.vdominant.authservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

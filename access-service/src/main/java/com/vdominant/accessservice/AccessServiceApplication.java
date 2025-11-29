@@ -1,4 +1,4 @@
-package com.gym.accessservice;
+package com.vdominant.accessservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

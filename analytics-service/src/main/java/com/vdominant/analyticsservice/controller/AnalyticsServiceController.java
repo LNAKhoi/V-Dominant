@@ -1,12 +1,12 @@
-package com.gym.accessservice.controller;
+package com.vdominant.analyticsservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AccessServiceController {
+public class AnalyticsServiceController {
     @GetMapping("/health")
     public String health() {
-        return "access-service is up";
+        return "analytics-service is up";
     }
 }

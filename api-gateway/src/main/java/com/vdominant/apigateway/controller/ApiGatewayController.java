@@ -1,12 +1,12 @@
-package com.gym.analyticsservice.controller;
+package com.vdominant.apigateway.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AnalyticsServiceController {
+public class ApiGatewayController {
     @GetMapping("/health")
     public String health() {
-        return "analytics-service is up";
+        return "api-gateway is up";
     }
 }
