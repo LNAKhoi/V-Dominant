@@ -1,33 +1,59 @@
-# compiled output
-/dist
-/tmp
+############################
+# Angular – compiled output
+############################
+dist/
+tmp/
+.angular/
+typings/
 
-# dependencies
+############################
+# Angular – dependencies
+############################
 node_modules/
 
-# IDEs and editors
-**/.idea/
-.vscode/*
+############################
+# Spring Boot – build output
+############################
+**/target/
+**/build/
+
+############################
+# IDEs and Editors
+############################
+**/.idea/               # IntelliJ project settings
+*.iml                  # IntelliJ module files
+.vscode/*              # VSCode settings
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# misc
-.sass-cache
-connect.lock
-coverage/
-libpeerconnection.log
-npm-debug.log
-testem.log
-typings/
-.angular/
-
-# e2e
-e2e/*.js
-e2e/*.map
-
-# System files
+############################
+# OS / Misc
+############################
 .DS_Store
 Thumbs.db
+
+############################
+# Angular test output
+############################
+coverage/
+npm-debug.log
+testem.log
+libpeerconnection.log
+
+############################
+# Environment files
+############################
+.env
+*.local
+
+############################
+# Logs
+############################
+*.log
+
+############################
+# Package lock file
+############################
 package-lock.json
