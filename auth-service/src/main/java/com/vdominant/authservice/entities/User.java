@@ -23,5 +23,9 @@ public class User {
     private String lastName;
     @Column
     private LocalDateTime createdAt;
+    @Column
+    private LocalDateTime updatedAt;
+    @Version
+    private Long version;
 }
 

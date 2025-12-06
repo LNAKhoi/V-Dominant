@@ -16,7 +16,7 @@ public class UserToken {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "pk_user_id")
     User user;
 
     @Column(nullable = false, unique = true)
