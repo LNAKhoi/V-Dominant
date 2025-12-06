@@ -1,0 +1,39 @@
+<div class="page-wrapper">
+    <div class="login-container">
+        <div class="left-panel">
+            <div class="company-name">V-DOMINANT</div>
+
+            <p class="description">
+                Access real-time forex signals, crypto market insights, and investment tools
+                designed to help you grow your portfolio.
+            </p>
+        </div>
+
+        <div class="right-panel">
+            <div class="form-wrapper">
+                <h2 class="form-title">Access To DashBoard</h2>
+
+                <p class="form-desc">
+                    Manage your investments, track forex trends, and monitor crypto assets
+                    all in one place.
+                </p>
+
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email ID" formControlName="email" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" formControlName="password" />
+                    </div>
+
+                    <div class="options">
+                        <a class="link" href="#">Register</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit" (click)="navigateToDashBoard()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
